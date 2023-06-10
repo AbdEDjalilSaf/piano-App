@@ -1,0 +1,134 @@
+*{
+    font-family: 'Cairo', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #eee;
+}
+html{
+scroll-behavior: smooth;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #000;
+    color: #fff;
+    padding: 25px 30px;
+    width: 800px;
+    border-radius: 10px;
+}
+.first{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+ul{
+    list-style: none;
+}
+h2{
+    color: #ccc;
+}
+.column,
+.volume{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.column span,
+.volume span{
+    font-size: 25px;
+    color: #bbb;
+}
+#circle{
+    appearance: none;
+    width: 42px;
+    height: 20px;
+    position: relative;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    background-color: #888;
+}
+#circle::before{
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    top: 18%;
+    cursor: pointer;
+    transition: 0.3s;
+    left: 5px;
+    background-color: #fff;
+}
+#circle:checked::before{
+    left: 25px;
+}
+#circle:checked{
+    background-color: #0080ff;
+}
+/* class hide ---- */
+.buttons .key.none{
+    display: none;  
+}
+.buttons .key{
+    user-select: none;
+}
+.buttons .wihte{
+    display: flex;
+    background-color: #fff;
+    color: #666;
+    gap: 1px;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 15px;
+    font-size: 21px;
+    border-radius: 10px;
+}
+.buttons .wihte:active{
+box-shadow: inset -5px -5px 15px rgba(0,0,0,0.2);
+background: linear-gradient(to bottom,#fff 0%,#eee 100%);
+}
+.buttons .black:active{
+    box-shadow: inset -5px -5px 15px rgba(255,255,255,0.2);
+    background: linear-gradient(to bottom,#000 0%,#444 100%);
+}
+.buttons{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+li.black{
+    z-index: 100;
+}
+.buttons li .key.wihte{
+    width: 75px;
+    height: 100%;
+}
+.buttons li span.black{
+    display: flex;
+    justify-content: center;
+    align-items: self-end;
+    margin: 0 -22px 0 -22px;
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 13px;
+    text-transform: uppercase;
+    color: #a2a2a2;
+    width: 52px;
+    border-radius: 0 0 10px 10px;
+    height: 70%;
+    background: linear-gradient(#333,#000);
+}
+.second{
+    height: 260px;
+}
